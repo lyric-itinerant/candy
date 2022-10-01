@@ -1,0 +1,49 @@
+/* Calculating the radius of circles I need for a bubble graph made of candy to compare
+ data on top 6 candy companies of 2021 by revenue*/
+ 
+let aMars, aFerrero, aMondelez, aMeiji, aHershey, aNestle, rMars, rFerrero,
+    rMondelez, rMeiji, rHershey, rNestle;
+aMars=20;
+aFerrero=13.6;
+aMondelez=11.5;
+aMeiji=10.1;
+aHershey=8.1;
+aNestle=7.6;
+let pi = Math.PI;
+
+
+function getArea(radius) {
+    let area = 0;
+    area = pi*radius*radius;
+    return area;
+}
+
+function getRadius(area){
+    //println("area " + area);
+    let radius = 0
+    radius = Math.sqrt(area/pi);
+    radius = Math.round(radius * 10000) / 10000
+    //println("radius " + radius);
+    return radius;
+}
+
+println("Mars area: " + aMars);
+// aMars = getArea(rMars);
+
+rMars = getRadius(aMars);
+println("Mars radius: " + rMars);
+
+rFerrero = getRadius(aFerrero);
+println("Ferrero radius: " + rFerrero);
+
+rMondelez = getRadius(aMondelez);
+println("Mondelez radius: " + rMondelez);
+
+rMeiji = getRadius(aMeiji);
+println("Meiji radius: " + rMeiji);
+
+rHershey = getRadius(aHershey);
+println("Hershey radius: " + rHershey);
+
+rNestle = getRadius(aNestle);
+println("Nestle radius: " + rNestle);
